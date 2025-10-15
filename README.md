@@ -1,4 +1,5 @@
 HỆ THỐNG BÃI ĐỖ XE THÔNG MINH (SMART PARKING SYSTEM IoT)
+
 Dự án **IoT tích hợp** sử dụng **ESP32, Node.js, MongoDB và mô hình YOLOv5** để **quản lý xe ra/vào bãi, nhận diện biển số và tính tiền tự động**.  
 Hệ thống hoạt động **theo thời gian thực**, điều khiển **cổng servo tự động**, ghi nhận dữ liệu từ cảm biến và hiển thị toàn bộ thông tin trên **bảng điều khiển web**.
 
@@ -30,6 +31,7 @@ Hệ thống gồm 3 thành phần chính kết nối với nhau qua **HTTP (RES
 ## 🔄 LUỒNG DỮ LIỆU TỔNG QUÁT
 
 <img width="787" height="645" alt="image" src="https://github.com/user-attachments/assets/655782c1-c92d-4841-9198-61518f6cb656" />
+
 ## 🧩 THIẾT BỊ & CÔNG NGHỆ 
 
 | Thành phần | Mô tả |
