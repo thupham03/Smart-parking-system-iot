@@ -29,8 +29,7 @@ Hệ thống gồm 3 thành phần chính kết nối với nhau qua **HTTP (RES
   - Biểu đồ thống kê
 ## 🔄 LUỒNG DỮ LIỆU TỔNG QUÁT
 
-<img width="4744" height="3944" alt="image" src="https://github.com/user-attachments/assets/bd6fa645-0312-450f-a4cc-b27f492338bb" />
-
+<img width="787" height="645" alt="image" src="https://github.com/user-attachments/assets/655782c1-c92d-4841-9198-61518f6cb656" />
 ## 🧩 THIẾT BỊ & CÔNG NGHỆ 
 
 | Thành phần | Mô tả |
