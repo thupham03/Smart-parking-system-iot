@@ -7,7 +7,7 @@ Hệ thống hoạt động **theo thời gian thực**, điều khiển **cổn
 
 Hệ thống gồm 3 thành phần chính kết nối với nhau qua **HTTP (REST API)** và **Socket.IO**:
 ### 🔹 1. ESP32 (Thiết bị phần cứng)
-- Gắn cảm biến **IR**, đầu đọc **RFID MFRC522** và **servo motor**.  
+- Gắn cảm biến **IR**, đầu đọc **RFID** và **servo motor**.  
 - Khi xe đi vào, ESP32 phát hiện cảm biến, đọc thẻ RFID và **gửi dữ liệu lên server Node.js** qua **HTTP POST**.  
 - Nhận **lệnh điều khiển servo** (mở/đóng cổng) từ Node.js thông qua **Socket.IO** theo thời gian thực.
 ### 🔹 2. Server Node.js (Điều phối trung tâm)
