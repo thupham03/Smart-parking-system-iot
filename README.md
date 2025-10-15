@@ -26,7 +26,7 @@ Hệ thống gồm 3 thành phần chính kết nối với nhau qua **HTTP (RES
 - Hiển thị:
   - Trạng thái chỗ đỗ (còn trống / đang sử dụng)  
   - Danh sách xe đang trong bãi  
-  - Lịch sử ra/vào và thông báo cảnh báo  
+  - Lịch sử ra/vào
   - Biểu đồ thống kê
 ## 🔄 LUỒNG DỮ LIỆU TỔNG QUÁT
 
