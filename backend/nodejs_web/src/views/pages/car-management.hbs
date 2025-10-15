@@ -1,0 +1,69 @@
+<div class="head-title">
+  <div class="left">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Quản lý</a>
+      </li>
+      <li><i class="bx bx-chevron-right"></i></li>
+      <li>
+        <a class="active" href="/views/cars">Quản lý xe</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="search-add">
+  <button class="btn-add" onclick="showCameraPopup()">
+    <i class="bx bx-webcam"></i>
+    Xem camera
+  </button>
+</div>
+<!-- Popup Modal -->
+<div id="cameraPopupModal" class="modal popup">
+  <div class="modal-title">
+    <h3>Xem Camera</h3>
+    <span class="close" onclick="closeCameraPopup()">&times;</span>
+  </div>
+  <div class="modal-content">
+    <img
+      style="
+                display: block;
+                -webkit-user-select: none;
+                margin: auto;
+                background-color: hsl(0, 0%, 25%);
+              "
+      src="http://127.0.0.1:5000/video_feed"
+    />
+    <img
+      style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);"
+      src="http://127.0.0.1:5001/video_feed"
+    />
+  </div>
+
+</div>
+<div class="dashboard-content-car-table">
+  <h3>Danh sách xe</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Biển số</th>
+        <th>Thời gian vào</th>
+        <th>Thời gian ra</th>
+        <th>Số tiền</th>
+        <th>Trạng thái</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each carList}}
+        <tr>
+          <td>{{inc @index}}</td>
+          <td>{{plate_number}}</td>
+          <td>{{entry_time}}</td>
+          <td>{{exit_time}}</td>
+          <td>{{price}}</td>
+          <td>{{{status}}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

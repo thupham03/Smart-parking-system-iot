@@ -1,0 +1,74 @@
+<div class="head-title">
+  <div class="left">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Bảng điều khiển</a>
+      </li>
+      <li><i class="bx bx-chevron-right"></i></li>
+      <li>
+        <a class="active" href="/views/">Trang chủ</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Thông tin bãi đỗ -->
+<ul class="box-info">
+  <li>
+    <i class="bx bxs-car-garage"></i>
+    <span class="text">
+      <h3>{{car}}</h3>
+      <p>Số lượng xe đang đỗ trong bãi</p>
+    </span>
+  </li>
+
+  <li>
+    <i class="bx bxs-parking"></i>
+    <span class="text">
+      <h3>{{emptySlotCount}}</h3>
+      <p>Vị trí trống</p>
+    </span>
+  </li>
+  <li>
+    <i class="bx bxs-bar-chart-alt-2"></i>
+    <span class="text">
+      <h3>{{accessCount}}</h3>
+      <p>Lượt xe vào ra hôm nay</p>
+    </span>
+  </li>
+</ul>
+<div class="dashboard-content">
+  <div class="dashboard-content-left">
+    <div class="dashboard-content-car-table">
+      <h3>Danh sách xe hiện tại</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Biển số</th>
+            <th scope="col">Thời gian vào</th>
+            <th scope="col">RFID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each currentCars}}
+            <tr>
+              <td scope="row">{{inc @index}}</td>
+              <td>{{plate_number}}</td>
+              <td>{{formatDate entry_time}}</td>
+              <td>{{rfid}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="dashboard-content-right">
+    <div class="dashboard-content-chart">
+      <h3>Biểu đồ xe ra/vào theo tuần</h3>
+      <div class="chart-container">
+        <canvas id="entryExitChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

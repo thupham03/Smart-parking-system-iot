@@ -1,0 +1,55 @@
+<div class="head-title">
+  <div class="left">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Quản lý</a>
+      </li>
+      <li><i class="bx bx-chevron-right"></i></li>
+      <li>
+        <a class="active" href="/views/logs">Lịch sử hoạt động</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="search-box">
+  <input
+    type="search"
+    id="searchInput"
+    placeholder="Tìm kiếm..."
+    onkeyup="filterTable()"
+  />
+</div>
+
+<div class="dashboard-content-logs-table">
+  <h3>Lịch sử xe ra vào</h3>
+  <table class="table table-striped" id="logsTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Biển số xe</th>
+        <th>Thời gian</th>
+        <th>Trạng thái</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each logs}}
+        <tr>
+          <td>{{inc @index}}</td>
+          <td>{{plate_number}}</td>
+          <td>{{formatDate
+              timestamp
+              "YYYY-MM-DD HH:mm:ss"
+              "Asia/Ho_Chi_Minh"
+            }}</td>
+          <td>{{#if status}}Đang đỗ{{else}}Đã rời đi{{/if}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <div id="noDataMessage">Không tìm thấy biển số</div>
+</div>
+
+<div class="dashboard-content-logs-page">
+  <div id="pagination" class="pagination"></div>
+</div>

@@ -1,0 +1,112 @@
+<div class="head-title">
+  <div class="left">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Quản lý</a>
+      </li>
+      <li><i class="bx bx-chevron-right"></i></li>
+      <li>
+        <a class="active" href="/views/users">Quản lý người dùng</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="user-button">
+  <div class="user-button-add">
+    <button onclick="addUser()">Thêm người dùng</button>
+  </div>
+</div>
+<div class="user-content-table">
+  <h3>Danh sách quản lý người dùng</h3>
+  <table class="uer-table-action">
+    <tr>
+      <th>Thứ tự</th>
+      <th>Tên người dùng</th>
+      <th>Chức vụ</th>
+      <th>Hành động</th>
+    </tr>
+    {{#each users}}
+      <tr>
+        <td>{{inc @index}}</td>
+        <td>{{this.username}}</td>
+        <td>{{this.role}}</td>
+        <td class="btn-action">
+          <div class="user-button-modify">
+            <button onclick="modifyUser('{{this._id}}')">Sửa người dùng</button>
+          </div>
+          <div class="user-button-delete">
+            <button onclick="deleteUser('{{this._id}}')">Xóa người dùng</button>
+          </div>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+<div class="addUser-detail popup">
+  <div class="addUser-title">
+    <h3>Thêm người dùng</h3>
+    <span class="close" onclick="closePopup()">×</span>
+  </div>
+  <div class="addUser-slot">
+    <div class="addUser-slot-input">
+      <label for="addUser_slot">Tên người dùng</label>
+      <input type="text" id="addUser_name" placeholder="Tên người dùng" />
+    </div>
+    <div class="addUser-slot-input">
+      <label for="addUser_pwd">Mật khẩu</label>
+      <input type="password" id="addUser_pwd" placeholder="Mật khẩu" />
+    </div>
+    <div class="addUser-slot-select">
+      <label for="addUser_role">Chọn chức vụ</label>
+      <select name="role" id="addUser_role">
+        <option value="admin">Admin</option>
+        <option value="staff">Nhân viên</option>
+      </select>
+    </div>
+  </div>
+  <div class="addUser-button">
+    <button class="save-button" onclick="saveUser()">Lưu</button>
+    <button class="cancel-button" onclick="closePopup()">Hủy</button>
+  </div>
+</div>
+<div class="modifyUser-detail popup">
+  <div class="modifyUser-title">
+    <h3>Sửa người dùng</h3>
+    <span class="close" onclick="closePopup()">×</span>
+  </div>
+  <div class="modifyUser-slot">
+    <div class="modifyUser-slot-input">
+      <input type="hidden" id="modifyUser_id" />
+      <label for="modifyUser_slot">Tên người dùng</label>
+      <input type="text" id="modifyUser_name" placeholder="Tên người dùng" />
+    </div>
+    <div class="modifyUser-slot-input">
+      <label for="modifyUser_pwd">Mật khẩu</label>
+      <input type="password" id="modifyUser_pwd" placeholder="Mật khẩu" />
+    </div>
+    <div class="modifyUser-slot-select">
+      <label for="modifyUser_role">Chọn chức vụ</label>
+      <select name="role" id="modifyUser_role">
+        <option value="admin">Admin</option>
+        <option value="staff">Nhân viên</option>
+      </select>
+    </div>
+  </div>
+  <div class="modifyUser-button">
+    <button class="save-button" onclick="updateUser()">Lưu</button>
+    <button class="cancel-button" onclick="closePopup()">Hủy</button>
+  </div>
+</div>
+<div class="deleteUser-detail popup">
+  <div class="deleteUser-title">
+    <h3>Xóa người dùng</h3>
+    <span class="close" onclick="closePopup()">×</span>
+  </div>
+  <div class="deleteUser-slot">
+    <p>Bạn có muốn xóa người dùng này không?</p>
+  </div>
+  <div class="deleteUser-button">
+    <button class="save-button" onclick="confirmDeleteUser()">Xóa</button>
+    <button class="cancel-button" onclick="closePopup()">Hủy</button>
+  </div>
+</div>

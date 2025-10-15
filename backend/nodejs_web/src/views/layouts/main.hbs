@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <title>Car Parking - ADMIN</title>
+  </head>
+  <body>
+    <section id="sidebar">
+      <a href="/views" class="brand">
+        <img src="/public/img/logo.png" />
+        <span class="text">Quản lý bãi giữ xe</span>
+      </a>
+      <ul class="side-menu top">
+        <li>
+          <a href="/views">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Bảng điều khiển</span>
+          </a>
+        </li>
+        <li>
+          <a href="/views/cars">
+            <i class="bx bxs-car"></i>
+            <span class="text">Quản lý xe</span>
+          </a>
+        </li>
+        <li>
+          <a href="/views/parking">
+            <i class="bx bxs-parking"></i>
+            <span class="text">Quản lý bãi đỗ</span>
+          </a>
+        </li>
+        <li>
+          <a href="/views/users">
+            <i class="bx bxs-user"></i>
+            <span class="text">Quản lý người dùng</span>
+          </a>
+        </li>
+        <li>
+          <a href="/views/logs">
+            <i class="bx bxs-file-doc"></i>
+            <span class="text">Lịch sử</span>
+          </a>
+        </li>
+        <li>
+          <button class="logout" id="logout-link">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Đăng xuất</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section id="content">
+      <div class="container">
+        {{{body}}}
+      </div>
+    </section>
+    <script src="/public/js/analytics.js"></script>
+    <script src="/public/js/auth.js"></script>
+    <script src="/public/js/car-management.js"></script>
+    <script src="/public/js/chart.js"></script>
+    <script src="/public/js/logout.js"></script>
+    <script src="/public/js/logs.js"></script>
+    <script src="/public/js/parking-management.js"></script>
+    <script src="/public/js/script.js"></script>
+    <script src="/public/js/user.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<div class="head-title">
+  <div class="left">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Quản lý</a>
+      </li>
+      <li><i class="bx bx-chevron-right"></i></li>
+      <li>
+        <a class="active" href="/views/parking">Quản lý bãi đỗ</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="parking-button">
+  <div class="parking-button-add">
+    <button onclick="addParking()">Thêm bãi đậu</button>
+  </div>
+  <div class="parking-button-modify">
+    <button onclick="modifyParking()">Sửa bãi đậu</button>
+  </div>
+  <div class="parking-button-delete">
+    <button onclick="deleteParking()">Xóa bãi đậu</button>
+  </div>
+</div>
+<div class="addParking-detail popup">
+  <div class="addParking-title">
+    <h3>Thêm bãi đậu xe</h3>
+    <span class="close" onclick="closeModal()">×</span>
+  </div>
+  <div class="addParking-slot">
+    <label for="add_slot">Thêm bãi đậu</label>
+    <input type="text" id="add_slot" />
+  </div>
+  <div class="addParking-button">
+    <button class="save-button" onclick="saveParking()">Lưu</button>
+    <button class="cancel-button" onclick="closeModal()">Hủy</button>
+  </div>
+</div>
+<div class="modifyParking-detail popup">
+  <div class="modifyParking-title">
+    <h3>Sửa bãi đậu xe</h3>
+    <span class="close" onclick="closeModal()">×</span>
+  </div>
+  <div class="modifyParking-slot">
+    <label for="modify_slot">Sửa bãi đậu</label>
+    <select id="modify_slot">
+      <!-- Options will be populated dynamically -->
+    </select>
+    <label for="modify_status_slot">Trạng thái</label>
+    <select id="modify_status_slot">
+      <!-- Options will be populated dynamically -->
+    </select>
+  </div>
+  <div class="modifyParking-button">
+    <button class="save-button" onclick="saveModifiedParking()">Lưu</button>
+    <button class="cancel-button" onclick="closeModal()">Hủy</button>
+  </div>
+</div>
+<div class="deleteParking-detail popup">
+  <div class="deleteParking-title">
+    <h3>Xóa bãi đậu xe</h3>
+    <span class="close" onclick="closeModal()">×</span>
+  </div>
+  <div class="deleteParking-slot">
+    <p>Chọn bãi đậu cần xóa?</p>
+    <select name="deleteSlot" id="deleteSlot">
+      <!-- Options will be populated dynamically -->
+    </select>
+  </div>
+  <div class="deleteParking-button">
+    <button class="save-button" onclick="confirmDelete()">Xóa</button>
+    <button class="cancel-button" onclick="closeModal()">Hủy</button>
+  </div>
+</div>
+<div class="parking_slots">
+  {{#each data}}
+    <div class="slot {{#if this.status_slot}}notempty{{/if}}" id="slot{{@key}}">
+      <p>{{@key}} - {{#if this.status_slot}}Có xe{{else}}Trống{{/if}}</p>
+      {{#if this.status_slot}}
+        <p>{{this.license_plate}}</p>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>

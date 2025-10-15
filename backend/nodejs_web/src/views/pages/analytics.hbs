@@ -1,0 +1,40 @@
+<div class="head-title">
+  <div class="left">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Quản lý</a>
+      </li>
+      <li><i class="bx bx-chevron-right"></i></li>
+      <li>
+        <a class="active" href="/views/analytics">Báo cáo & thống kê</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="date-filters">
+  <button id="daily-btn" class="active">Ngày</button>
+  <button id="weekly-btn">Tuần</button>
+  <button id="monthly-btn">Tháng</button>
+</div>
+<div class="statistics">
+  <div class="stat">
+    <h3>Tỉ lệ tăng/giảm tổng số xe</h3>
+    <p id="total-cars-change">{{totalCarsChange}}</p>
+  </div>
+  <div class="stat">
+    <h3>Tổng số xe</h3>
+    <p id="total-cars">{{totalCars}}</p>
+  </div>
+  <div class="stat">
+    <h3>Lượt xe vào/ra</h3>
+    <p id="car-entries-exits">{{carEntries}}/{{carExits}}</p>
+  </div>
+</div>
+<div class="content-analytics">
+  <div class="content-analytics-chart-left">
+    <canvas id="carChart"></canvas>
+  </div>
+  <div class="content-analytics-chart-right">
+    <canvas id="parkingChart"></canvas>
+  </div>
+</div>

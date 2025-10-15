@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <title>Car Parking - ADMIN</title>
+  </head>
+  <body>
+    <div class="container-login">
+      <div class="wrap-login">
+        <div class="wrap-login-title">
+          <span>Đăng nhập</span>
+        </div>
+        <div class="wrap-login-logo">
+          <img src="/public/img/logo.png" alt="Logo" />
+        </div>
+        <form id="login-form" action="/auth/login" method="POST">
+          <div class="wrap-login-input">
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" class="username" name="username" required />
+          </div>
+          <div class="wrap-login-input">
+            <label for="password">Mật khẩu</label>
+            <input type="password" class="password" name="password" required />
+          </div>
+          <div class="wrap-login-button">
+            <button type="submit" class="login-btn" id="login-btn">Đăng nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/public/js/auth.js"></script>
+  </body>
+</html>
